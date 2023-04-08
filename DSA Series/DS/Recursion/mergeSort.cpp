@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std;
 
+//Approach - using index (LB video method)
+
 void merge(int *arr, int s, int e) {
 
     int mid = s+(e-s)/2;
@@ -82,4 +84,54 @@ int main() {
     } cout << endl;
 
     return 0;
+}
+
+
+//Approach 2 - by dividing array into two halves and using mergetwo arrays method to merge
+
+void merge(int input[],int arr1[ ],int arr2[ ],int size1,int size2){
+	int i = 0,j=0,k=0;
+	while(i<size1 && j<size2){
+		if(arr1[i]<arr2[j]){
+			input[k++] = arr1[i++];
+		}
+		else{
+			input[k++]=arr2[j++];
+		}
+	}
+
+	while(i<size1){
+		input[k++] = arr1[i++];
+	}
+
+	while(j<size2){
+		input[k++] = arr2[j++];
+	}
+}
+
+void mergeSort(int input[], int size){
+       	//basecase
+	//if array size is zero or 1 then it is already sorted return true
+	if(size<=1){
+		return ;
+	}
+
+	//else divide the array into two parts by finding mid
+	int mid = size/2;
+	//creating two arrays of halve sizes
+	int size1 = mid;
+	int size2 = size-mid;
+	int arr1[size1];
+	int arr2[size2];
+	for(int i = 0;i<mid;i++){
+		arr1[i] = input[i];
+	}
+	int j = 0;
+	for(int i = mid;i<size;i++){
+		arr2[j] = input[i];
+		j++;
+	}
+	mergeSort(arr1,size1);
+	mergeSort(arr2,size2);
+	merge(input,arr1,arr2,size1,size2); 
 }

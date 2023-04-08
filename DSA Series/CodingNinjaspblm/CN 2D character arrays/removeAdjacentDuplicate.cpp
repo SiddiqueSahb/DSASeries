@@ -28,7 +28,7 @@ xyzx
 */
 
 //********LOGIC************
-//yaha pe loop 1 se start karo aur ek char banao usme 0th index element ko put karo.
+//yaha pe loop ko 1 se start karo aur ek char banao usme 0th index element ko put karo.
 //loop wale element ko  0th index element se compare karo, if same hai toh aage badho aur nhi same hai toh ith element ko put karo aur usko lastChar banado;
 
 
