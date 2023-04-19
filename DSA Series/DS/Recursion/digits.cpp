@@ -12,4 +12,12 @@ int count(int n){
     return c;
 }
 
-//lovebabbar sayDigit problem lec32 day2 recursion
+//another approach
+//noOfDigit
+int noOfDigit(int n){
+    if(n==0){
+        return 0;
+    }
+    int d = n%10;
+    return 1+ noOfDigit(n/10);
+}
