@@ -67,7 +67,7 @@ int tripletSum(int *input, int size, int x)
         }
 
 
-//Approach 2 (includes duplicate)
+//Approach 2 (includes duplicate) two pointer approach
 
 int tripletSum(int *input, int size, int x)
 {
@@ -77,7 +77,7 @@ int tripletSum(int *input, int size, int x)
 		int count = 0;
 	for(int i = 0;i<size;i++)
 	{
-	
+	 
 		int l = i+1;
 		int r = size-1;
 		
@@ -86,12 +86,16 @@ int tripletSum(int *input, int size, int x)
 			int sum = input[i]+input[l]+input[r];
 			if(sum == x){
 
+				//for eg. 13333 sum = 7
+				//l=1 r=4 n = 4-1+1 = 4 elements then getting sum of that elements
 				if(input[l]==input[r]){
 					int n = r-l+1;
 					count = count + n*(n-1)/2;
 					break;
 				}
 				else{
+					//for eg . 12233 sum = 6
+					//here we 1+2+3 = 6,as here elements are same we are getting the frequency of 2 and frequency of 3
 					int countl=0, countr=0;
 					int y = l;
 					while(l<=r && input[l] == input[y]){
@@ -107,9 +111,11 @@ int tripletSum(int *input, int size, int x)
 				}
 			
 			}
+			//if we add and we get sum greater than x then we want lesser element so decrement right index
 			else if (sum>x){
 				r--;
                         } else {
+				// if we get sum less than x then we want greater element	so increment left index	
                           l++;
                         }
                 }

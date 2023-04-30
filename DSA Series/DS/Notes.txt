@@ -1,0 +1,4 @@
+// finding the frequecy of element
+// shifting the elements in an array
+// making copy of array and adding the elements
+// finding the sum of element ((n*(n-1))/2)
