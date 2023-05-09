@@ -26,7 +26,7 @@ public :
     this->denominator = this->denominator / gcd;
   }
 
-  void add(Fraction f2){
+  void add(Fraction const &f2){
     int lcm = denominator /*of f1 */ * f2.denominator;
     int x = lcm/denominator;
     int y = lcm/f2.denominator;
@@ -37,4 +37,11 @@ public :
 
     simplify();
   }
+
+void multiply(Fraction const &f2){
+  numerator = numerator * f2.denominator;
+  denominator = denominator * d2.denominator;
+
+  simplify()
+}
 }
