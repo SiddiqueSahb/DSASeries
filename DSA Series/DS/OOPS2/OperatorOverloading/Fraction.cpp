@@ -82,7 +82,7 @@ class Fraction {
       //Fraction f3 = ++f1;
       //return will send the content pointed by dereferencing pointer of f1(i.e this).
       //if calling fraction f3 = ++(++f1);
-      //(++f1) is called it will give answer which is store in temporary space and on that
+      //(++f1) is called, it will give answer which is store in temporary space and on that
       //++() - ++ is called which will increment the value but we want that value must not change on temporary space but on 
       // real space so it should return refernce(i.e (++f1) - ans of this will return reference and on that reference again ++ will work upon)
       //bcz of & , copy (i.e temporary space will not be created)

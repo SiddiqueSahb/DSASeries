@@ -4,3 +4,5 @@ Getter and Setter
 Constructor and this keyword
 parametrized constructor
 Destructor
+copy constructor
+copy assignment operator

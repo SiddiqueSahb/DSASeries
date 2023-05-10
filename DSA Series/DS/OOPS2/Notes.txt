@@ -3,3 +3,6 @@ Copy Constructor
 Initialization list
 Const function
 Static Members
+operator overloading
+  - Adding two objects and storing into 3rd
+Dynamic array class

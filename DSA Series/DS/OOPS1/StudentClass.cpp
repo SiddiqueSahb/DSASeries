@@ -10,7 +10,6 @@ class StudentClass {
     
   }
 
-
 //getter
   int getAge(){
     return age;
