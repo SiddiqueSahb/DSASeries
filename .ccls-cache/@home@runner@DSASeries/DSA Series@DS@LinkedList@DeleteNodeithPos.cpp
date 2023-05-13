@@ -70,7 +70,7 @@ Node *deleteNode(Node *head, int pos)
 		temp = head;
 		head = head->next;
 		return head;
-        delete temp;
+    delete temp;
 	}
 
    
@@ -80,7 +80,7 @@ Node *deleteNode(Node *head, int pos)
 		count++;
 	}
 
-       //traversing and checking whether pos is greater than length of linked list
+  //traversing and checking whether pos is greater than length of linked list
 	if(curr == NULL || curr->next == NULL){
 		return head;
 	}
