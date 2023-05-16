@@ -40,7 +40,7 @@ public :
 
 void multiply(Fraction const &f2){
   numerator = numerator * f2.denominator;
-  denominator = denominator * d2.denominator;
+  denominator = denominator * f2.denominator;
 
   simplify();
 }
