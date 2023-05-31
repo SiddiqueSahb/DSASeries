@@ -25,6 +25,7 @@ Node insertNode(Node *head,int i,int data){
   }
 }
 
+//input method 2
 Node* takeInputTwo(){
   int data;
   cin>>data;
@@ -52,6 +53,7 @@ Node* takeInputTwo(){
   return head;
 }
 
+//Input Method 1
 Node* takeInput(){
   int data;
   cin>>data;
