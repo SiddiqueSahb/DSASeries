@@ -36,7 +36,6 @@ For the second query, the list is empty. An empty list is always a palindrome , 
 
 //APPROACH Optimized
 /*
-
 1.Find the middle element of the linked list.
 2.Reverse a linked list from the next element of the middle element. 
 3.Iterate through the new list until the middle element reaches the end of the list.
@@ -44,7 +43,7 @@ For the second query, the list is empty. An empty list is always a palindrome , 
  other from the next element of middle element which we reversed )
 4.if not same return false other wise true.
 
-//APPROACH FIINDING MIDDLE
+//APPROACH FINDING MIDDLE
 1.JUST GET THE COUNT AND THEN TRAVERSE TILL COUNT/2 TO GET THE MIDDLE (NAIVE APPROACH)
 2.SLOW FAST APPROACH (Tortoise-Hare approach)
 we increment slow ptr by 1 and fast ptr by 2, so if take a close look fast ptr will travel double that of the slow pointer. So when the fast ptr will be at the end of the Linked List, slow ptr would have covered half of the Linked List till then. So slow ptr will be pointing towards the middle of Linked List.

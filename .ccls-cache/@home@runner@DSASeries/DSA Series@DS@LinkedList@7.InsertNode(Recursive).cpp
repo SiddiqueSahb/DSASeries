@@ -1,3 +1,4 @@
+
 Node* insertNodeRec(Node *head, int i, int data) {
     /* Don't write main().
      * Don't read input, it is passed as function argument.

@@ -66,6 +66,7 @@ Node *deleteNodeRec(Node *head, int pos) {
 		return head;
 	}
 
+  //deleting first node
 	if(pos==0){
 		temp = head;
 		head = head->next;
@@ -73,6 +74,7 @@ Node *deleteNodeRec(Node *head, int pos) {
 		delete temp;
 	}
 
+  //standing 1 step behind for deletion of node
 	if( pos == 1 && head->next != NULL){
 		Node *t = head->next;
 		Node *n = t->next;
@@ -82,5 +84,25 @@ Node *deleteNodeRec(Node *head, int pos) {
 	}
 
 	Node *curr = deleteNodeRec(head->next,pos-1);
+	return head;
+}
+
+//Approach 2
+Node *deleteNodeRec(Node *head, int pos) {
+	//Write your code here
+
+	if(head == NULL ){
+		return head;
+	}
+
+  //deleting first node
+	if(pos==0){
+		Node *temp = head;
+		head = head->next;
+		delete temp;
+    return head;
+	}
+	Node *curr = deleteNodeRec(head->next,pos-1);
+  head->next = curr;
 	return head;
 }

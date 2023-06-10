@@ -38,7 +38,9 @@ Sample Output 2 :
 
 //Approach 
 /*
-1.Find length then dividing by 2 and then getting the midpoint.
+1.Find length , then dividing by 2 and then getting the midpoint.
+or
+2. Using slow and fast pointer find the midpoint
 */
 
 /****************************************************************

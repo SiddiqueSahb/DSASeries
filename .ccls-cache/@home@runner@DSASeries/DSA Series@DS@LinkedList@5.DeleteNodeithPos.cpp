@@ -51,6 +51,25 @@ Sample Output 2 :
 10 20 30 40 50 60
   */
 
+/*
+Edge Cases: This way of thinking will almost always work. There are a couple of edge
+cases that we need to consider separately. These cases are:
+1. The node to be deleted is the head node.
+2. The node to be deleted is the tail node.
+
+The first case is very easy to handle. If we need to delete the head node, we can simply
+return the next node of head.
+For the second one, our “ABC” approach will work fine because in that case node ‘C’ will
+be ‘null’ and we assign that to node ‘A’ which will run perfectly fine.
+
+
+Special Cases: There are some special cases to be considered as well but they are easy
+to handle. They are:
+1. ‘head’ node is null: an empty linked list has been passed
+2. The index is out of bounds of the linked list: The index is negative or it’s greater
+than or equal to the size of the linked list.
+In both these cases, we can simply return head
+  */
 
 Node *deleteNode(Node *head, int pos)
 {
@@ -58,7 +77,7 @@ Node *deleteNode(Node *head, int pos)
 	Node *curr = head;
 	int count = 0;
 	Node *next = NULL;
-    Node *temp = NULL;
+  Node *temp = NULL;
 
 //checking LL is empty or not
     if(head == NULL){
