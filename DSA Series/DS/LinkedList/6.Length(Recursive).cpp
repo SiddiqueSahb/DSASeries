@@ -33,3 +33,17 @@ int length(Node *head) {
 	int ans = length(temp->next);
 	return 1 + ans;
 }
+
+//Method 2
+int length(Node *head) {
+    // Write your code here
+	Node *temp = head;
+	if(temp == NULL){
+		return 0;
+	}
+	int ans = 1;
+	//traversing till the end then while returning getting the count of edges
+	 ans = ans + length(temp->next);
+ 	return ans;
+//	return 1 + ans;
+}

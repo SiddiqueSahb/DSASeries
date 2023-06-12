@@ -80,7 +80,7 @@ int findNodeRec(Node *head, int n)
 int findNodeRec(Node *head, int n)
 {
 	//Write your code here
-	static int count = 0;
+
 	//if LL is empty return -1
 	if(head == NULL){
 		return -1;

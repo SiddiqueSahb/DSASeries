@@ -50,7 +50,7 @@ For the second query, we delete three nodes after every two nodes, resulting in 
 /*
 CASE 1 - M = 0 N = 3
 CASE 2 - M = 3 N = 0
-CASE 3 - M =2 N = 3
+CASE 3 - M = 2 N = 3
 //CHECK AND GET THE CORNER CASES IN THIS TWO LL
 LL 10 22 10 26 11 7 8 1 23 5 1 -1
 LL 1 2 3 4 5 6 7 8 -1
@@ -115,7 +115,7 @@ Node *skipMdeleteN(Node *head, int M, int N)
 while((temp1 || temp2) != NULL){
 	int count1 = 1;
 	int count2 = 1;
-  //INCLUDING NODE
+  //INCLUDING NODE && checking temp1->next != NULL bcz for assigning temp2
 	while(count1 != M && temp1->next != NULL){
 		temp1 = temp1->next;
 		count1++;
@@ -123,6 +123,9 @@ while((temp1 || temp2) != NULL){
 	temp2 = temp1->next;
   //DELETING NODE 
 	while(count2 != N && temp2 != NULL){
+    // node to be deleted is store in temp 
+    Node *temp = temp2;
+	  delete temp;
 		temp2 = temp2->next;;
 		count2++;
 	}

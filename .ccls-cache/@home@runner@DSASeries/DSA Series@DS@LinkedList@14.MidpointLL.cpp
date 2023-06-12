@@ -71,7 +71,7 @@ Node *midPoint(Node *head)
 	
   Node *slow = head;
 	Node *fast = head->next;
-	//fast != NULL for odd len LL , fast-next != NULL for even Len LL
+	//fast != NULL for odd len LL , fast->next != NULL for even Len LL
 	while(fast != NULL && fast->next != NULL){
 		slow = slow->next;
 		fast = fast->next->next;

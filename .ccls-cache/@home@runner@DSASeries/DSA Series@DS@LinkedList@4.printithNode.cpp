@@ -70,5 +70,4 @@ void printIthNode(Node *head, int i)
 	if(current!=NULL){
     	cout<<current->data;
   }
-
 }

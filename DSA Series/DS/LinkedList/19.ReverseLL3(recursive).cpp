@@ -63,7 +63,7 @@ Node *reverseLinkedListRec(Node *head)
 //assuming after calling recursion LL is sorted
 //4->3->2-> NULL and now we want to connect Node 1 to reversed LL
 	Node *smallAns = reverseLinkedListRec(head->next);
- //Now smallAns in LL 4->3->2-> NULL is pointing to Node 4 and I/p LL 1->2->3->4->NULL and head is pointing to Node 1 and       tail is Node 2 in Reversed LL so we can get the address of Node 2
+ //Now smallAns in LL 4->3->2-> NULL is pointing to Node 4 and I/p LL 1->2->3->4->NULL and head is pointing to Node 1 and  tail is Node 2 in Reversed LL so we can get the address of Node 2
   Node *tail = head->next;
   //LL 4->3->2-> NULL , tail is pointing to Node 2 and we want to attach Node 1 so we get 4->3->2->1
   tail->next = head;

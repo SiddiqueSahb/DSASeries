@@ -94,7 +94,7 @@ Node *deleteNode(Node *head, int pos)
 
    
     //Traversing and standing just before the node to be deleted
-	while(curr->next != NULL && count < pos-1){
+	while(curr != NULL && count < pos-1){
 		curr = curr->next;
 		count++;
 	}
