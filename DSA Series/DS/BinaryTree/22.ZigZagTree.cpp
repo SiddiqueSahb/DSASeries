@@ -102,3 +102,64 @@ cout<<endl;
 
 	}
 }
+
+
+
+//METHOD 2 APPROACH 2
+/*
+
+1.Create an queue and store root
+2.Create a vector of vector to store the zigzag traversal
+3.Create a flag to decide to move either leftToright or rightToLeft
+4.if flag is true , insert value in same sequence otherwise in reverse way
+5.Go through each level , pop value from the queue  and insert its value to vector based on value of flag
+6.After every level change flag value and push vector to result vector
+  */
+
+vector<vector<int>> zigZaglevelOrder(BinaryTreeNode<int>* root){
+  //to store output of each level
+  vector<vector<int>> result;
+  if(root == NULL){
+    return result;
+  }
+
+  //create an queue and push root node to queue
+  queue<BinaryTreeNode<int>*> pendingNodes;
+  pendingNodes.push(root);
+  bool LeftToRight = true;
+
+  while(pendingNodes.size() != NULL){
+    //getting the size of the queue
+    int size = pendingNodes.size();
+    //creating a vector of size to store each level values 
+    vector<int> row(size);
+
+    //loop each level
+    for(int i = 0;i<size;i++){
+      //pop value of queue
+      BinaryTreeNode<int>* front = pendingNodes.front();
+      pendingNodes.pop();
+
+      //After poping the queue value , inserting to the vector.
+      //finding the index position in vector to store the value
+      //for lefttoright store as it is , for righttoleft store in reverse way so (size of vector - 1 - i)
+      int index = LeftToRight ? i : size - 1 - i
+      row[index] = front->value;
+
+      //if root is having left child push to queue
+      if(front->left != NULL){
+        pendingNodes.push(front->left);
+      }
+      //if root is having right child push to queue
+      if(front->right != NULL){
+        pendingNodes.push(front->right);
+      }
+    }
+    //level wise done so change flag value of LeftToRight
+    LeftToRight = !LeftToRight;
+    //push each level vector to result vector 
+    result.push_back(row); 
+  }
+return result;
+  
+}

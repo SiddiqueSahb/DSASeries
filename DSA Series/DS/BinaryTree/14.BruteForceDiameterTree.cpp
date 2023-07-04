@@ -24,7 +24,7 @@ e.g Consider a tree having left subtree with many children and right subtree wit
 So finding LST diameter , RST diameter , and sum of LSTHeight a& RSTHeight and finding max among them will be diameter of tree.
 
 
-For Finding height we are going to each node in a tree ,I.e visiting every node once
+For Finding height we are going to each node in a tree ,i.e visiting every node once
 So T(n) = O(n)
 
 For finding diameter , we are not doing constant work , we are calling height function each time.

@@ -50,6 +50,6 @@ int getHeight(TreeNode<int>* root) {
             max = height;
         }
     }
-    //considering single node as heoght 1 so node at two level means height = 2
+    //considering single node as height 1 so node at two level means height = 2
     return 1 + max;
 }
