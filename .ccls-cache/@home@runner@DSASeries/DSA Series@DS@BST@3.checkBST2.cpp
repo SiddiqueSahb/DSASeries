@@ -28,4 +28,5 @@ isBSTReturn isBST2(BinaryTreeNode<int>* root){
   output.isBST = isBSTFinal;
   output.minimum = minimum;
   output.maximum = maximum;
+  return output;
 }
