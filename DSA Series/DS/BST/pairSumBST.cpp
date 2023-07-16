@@ -20,8 +20,6 @@ Sample Output 1:
 2 10
 5 7
 
-
-
 */
 
 

@@ -60,7 +60,7 @@ APPROACH MIN HEAP INSERTION
 
 1.Insert the new element at the end of the tree.
 2.AFTER EVERY INSERTION , CHILD WITH PARENT 
-3. IF CHILD IS LESS THAN PARENT DO  SWAP
+3.IF CHILD IS LESS THAN PARENT DO  SWAP
 4.After swapping value of childIndex and parentIndex changes,new value of childIndex and parentIndex is  calculated , while loop ends when childIndex > 0 as childIndex is now root.
 */
 
