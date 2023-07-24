@@ -87,9 +87,10 @@ void insert(int element){
    // break is done bcz if childNode is greater than parentNode then no need to swap, so break the loop
    break;
  }
- //after swapping value of childIndex and parentIndex changes,new value of childIndex and parentIndex is  //calculated , while loop ends when childIndex > 0 as childIndex is now root.
+ //after swapping value of childIndex and parentIndex changes,new value of childIndex and parentIndex is calculated , 
   childIndex = parentIndex;
  } 
+// while loop ends when childIndex > 0 as childIndex is now root. 
 }
 
 /*
@@ -129,7 +130,8 @@ APPROACH
         int parentIndex = 0; 
         int leftChildIndex = 2*parentIndex + 1;
         int rightChildIndex = 2*parentIndex + 2; 
-       
+
+        //LEFTCHILD SHOULD BE WITHIN THE HEAP SIZE
         while(leftChildIndex < pq.size()){
             //initially min will be root.creating var minIndex bcz for further heapify minIndex will be become new Parent
             int minIndex = parentIndex;
