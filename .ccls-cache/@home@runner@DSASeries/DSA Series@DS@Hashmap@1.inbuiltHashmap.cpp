@@ -1,3 +1,9 @@
+
+//As unordered_map does not allow to store elements with duplicate keys, 
+//so the count() function basically checks if there exists an element in the unordered_map with a given key or not.
+
+
+
 #include <iostream>
 #include <unordered_map>
 #include <string>
@@ -21,7 +27,7 @@ int main() {
 	cout << ourmap["ghi"] << endl; 
 	cout << "size : " << ourmap.size() << endl;
 
-	// check Presense
+	// check Presence
 	if (ourmap.count("ghi") > 0) {
 		cout << "ghi is present" << endl;
 	}

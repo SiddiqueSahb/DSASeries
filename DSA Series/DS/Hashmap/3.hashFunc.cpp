@@ -1,0 +1,6 @@
+/*
+We want Student to be as key.so find address of student and convert it to int.
+Then pass this int to compression function and we get int.
+
+
+*/
