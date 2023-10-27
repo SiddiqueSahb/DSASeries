@@ -30,9 +30,10 @@ Explanation
 5.REPEAT THE ABOVE STEPS
 6.THEN RETURN THE COUNT 
 
-EG. FOR 2 CHECK -2 IS PRESENT OR NOT 
+EG. FOR 2 , CHECK -2 IS PRESENT OR NOT 
 IF PRESENT THEN INCR THE COUNT 
 
+**special case *****
 EDGE CASE FOR INPUT ALL ZEROS
 DRY RUN FOR THIS INPUT ARR = [0,0,0,0,0]
 
@@ -42,6 +43,10 @@ NEGATION OF 0 IS 0
 COUNT(0) WE GET 1
 DRY RUN AND CHECK THE STEP
 
+What happens if there are multiple 0s in the array. We’ll have to be careful that we don’t
+consider (0, 0) where both 0s are on the same index as a valid pair. This problem has
+an easy fix. Just make sure that you insert/update the current element after you’ve
+printed the pairs (if any) for that iteration.
 */
   
 

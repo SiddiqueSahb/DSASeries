@@ -23,7 +23,7 @@ Sample Output 2 :
 1
 
 //APPROACH
-1. We create a hash table to store frequency of each element of an array as key value pair
+1.We create a hash table to store frequency of each element of an array as key value pair
 2.We traverse each element of an array ,check in hashtable frequency of an element
 3.if not present , mark it as 1 else increments its count by 1.
 4.Compare max with frequency of an element , if max is lesser then max value will frquency of an element
