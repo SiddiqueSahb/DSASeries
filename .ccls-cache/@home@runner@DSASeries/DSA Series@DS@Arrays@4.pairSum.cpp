@@ -11,8 +11,8 @@ using namespace std;
 
 int main() {
     // Write C++ code here
- int input[6] = {2,6,2,1,4,3};
- int sum = 4;
+ int input[9] = {1, 3 ,6 ,2, 5 ,4, 3, 2, 4};
+ int sum = 7;
  int size1 = sizeof(input)/sizeof(input[0]);
   int count = 0;
     for (int i = 0; i < size1; i++) {
